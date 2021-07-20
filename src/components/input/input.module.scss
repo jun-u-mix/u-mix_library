@@ -1,51 +1,47 @@
 @import '../../main.module.scss';
 
-.input_main{
-    display: flex;
-    align-items: center;
-    .input{
-        padding: 6px;
-        outline: none;
-        box-sizing: border-box;
-        border: 1px solid $grey;
-        border-radius: $radius;
-        font-size: $font_size;
-        background-color: inherit;
+.input{
+    padding: 6px;
+    outline: none;
+    box-sizing: border-box;
+    border: 1px solid $grey;
+    border-radius: $radius;
+    font-size: $font_size;
+    background-color: inherit;
+}
+.input_light{
+    color: black;
+    &::placeholder {
+        color: rgb(116, 116, 116);
     }
-    .input_light{
-        color: black;
-        &::placeholder {
-            color: rgb(116, 116, 116);
-        }
+}
+.input_dark{
+    color: white;
+    &::placeholder {
+        color: $grey;
     }
-    .input_dark{
-        color: white;
-        &::placeholder {
-            color: $grey;
-        }
+}
+
+.input_stretched{
+    width: 100%;
+}
+.input_rounded{
+    border-radius: 30px;
+}
+.input_send_message{
+    flex: 1 1 auto;
+    border: none;
+    outline: none;
+    padding: 4px 12px;
+    border-radius: 30px;
+    background-color: rgb(219, 219, 219);
+    &::placeholder{
+        font-weight: 300;
     }
-    
-    .input_stretched{
-        width: 100%;
-    }
-    .input_rounded{
-        border-radius: 30px;
-    }
-    .input_send_message{
-        flex: 1 1 auto;
-        border: none;
-        outline: none;
-        padding: 4px 12px;
-        border-radius: 30px;
-        background-color: rgb(219, 219, 219);
-        &::placeholder{
-            font-weight: 300;
-        }
-    }
-    .send_btn{
-        height: 25px;
-        display: inline-block;
-        margin-left: 10px;
-        cursor: pointer;
-    }
+}
+.send_btn{
+    height: 25px;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
 }

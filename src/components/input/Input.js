@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import React, {useContext}  from 'react'
+import React, {useContext, Fragment}  from 'react'
 import {DarkContext} from '../container/Container'
 import styles from './input.module.scss'
 
@@ -17,7 +17,7 @@ export default function InputUmix(
     const darkContainer  = useContext(DarkContext)
     
     return (
-        <div className={styles.input_main}>
+        <>
             <input 
                 type="text"
                 style={style} 
@@ -44,6 +44,6 @@ export default function InputUmix(
                 :
                     null
             }
-        </div>
+        </>
     )
 }
