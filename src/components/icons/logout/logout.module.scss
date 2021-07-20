@@ -1,7 +1,8 @@
+@import '../../../main.module.scss';
 .main{
     display: inline-block;
     cursor: pointer;
     &:hover .path {
-        fill: #dc3545;
+        fill: $red;
     }
 }

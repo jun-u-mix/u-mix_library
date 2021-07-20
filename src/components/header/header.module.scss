@@ -122,6 +122,9 @@
 }
 .active{
     color: $main_color !important;
+    &.dark{
+        color: $main_more_lighter_color !important;
+    }
 }
 @keyframes drop{
     0% { 

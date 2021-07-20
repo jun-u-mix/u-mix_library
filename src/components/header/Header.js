@@ -6,7 +6,7 @@ import styles from './header.module.scss'
 let isLoaded = false;
 
 export default function HeaderUmix({
-        isLogin,
+        conditionIs,
         params,
         darkContainer,
         dark,
@@ -19,7 +19,7 @@ export default function HeaderUmix({
     const [link, setLink] = useState(0);
 
     let links = params.map((param, i) => {
-        if(isLogin === param.logined) return <NavLink 
+        if(conditionIs === param.condition) return <NavLink 
                     key={i} 
                     to={param.route}
                     className={

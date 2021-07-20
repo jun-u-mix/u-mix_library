@@ -38,30 +38,31 @@ const App = () => {
       <BrowserRouter>
       <Main>
         <Navbar 
-          isLogin={true}
+          conditionIs={"logined"}
           dark={isDarkTheme}
           type="left"
           params={[
-            {route: "/1", text: "FIRST", name: "settings", logined: true},
-            {route: "/2", text: "SECOND", name: "settings", logined: true},
-            {route: "/3", text: "THIRTH", name: "settings", logined: false},
-            {route: "/4", text: "FORTH", name: "settings", logined: true},
+            {route: "/1", text: "settings", name: "settings", condition: "logined"},
+            {route: "/2", text: "login", name: "login", condition: "noLogined"},
+            {route: "/3", text: "settings", name: "settings", condition: "logined"},
+            {route: "/4", text: "logout", name: "logout", condition: "logined", danger: true},
           ]}
           profileImg="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"
+          profileLink="profile"
           profileName="Nikolay"
           profileInfo="info info info info info"
         >
         </Navbar>
         <Content>
           {/* <Navbar 
-            isLogin={true}
+            conditionIs={"logined"}
             dark={isDarkTheme}
             type="top"
             params={[
-              {route: "/1", text: "FIRST", name: "settings", logined: true},
-              {route: "/2", text: "SECOND", name: "settings", logined: true},
-              {route: "/3", text: "THIRTH", name: "settings", logined: false},
-              {route: "/4", text: "FORTH", name: "settings", logined: true},
+              {route: "/1", text: "FIRST", name: "settings", condition: "logined"},
+              {route: "/2", text: "SECOND", name: "settings", condition: "logined"},
+              {route: "/3", text: "THIRTH", name: "settings", condition: "noLogined"},
+              {route: "/4", text: "FORTH", name: "settings", condition: "logined"},
             ]}
             profileImg="https://image.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg"
             profileName="Nikolay"
@@ -70,8 +71,8 @@ const App = () => {
           </Navbar> */}
           <Container dark={isDarkTheme}>
             <InputButton onChange={testFunc}  onClick={testFunc} placeholder="place..." type="classic" btnText="button"  />
-            <Input onChange={testFunc} stretched placeholder="place..." type="rounded" />
-            <Button type="rounded"> button </Button>
+            <Input onChange={testFunc} stretched placeholder="place..." type="send_message" icon="arrow" />
+            <Button type="floating"> button </Button>
             <Image 
               speed={300}
               src={a} 
@@ -88,7 +89,7 @@ const App = () => {
                 "https://s5o.ru/storage/simple/cyber/edt/d1/d9/85/c0/cyberea2fce3ee29.jpg",
                 "https://static-cdn.jtvnw.net/emoticons/v1/160400/3.0"
               ]} 
-              size="micro" type="circle"
+              size="large" type="circle"
             />
             <button onClick={() => {setIsLoad((prev) => !prev)}}>load changer</button>
             {
